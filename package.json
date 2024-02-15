@@ -4,8 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "build:utils": "turbo build --filter=utils",
+    "build:core": "turbo build --filter=core",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
@@ -15,7 +17,8 @@
   "dependencies": {
     "@monorepodemo/utils": "workspace:^",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "turbo": "^1.12.4"
   },
   "devDependencies": {
     "@types/react": "^18.2.55",
